@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <div>
+  <preloader></preloader>
+  <div class="flex h-screen overflow-hidden">
+    <sidebar></sidebar>
+    <div class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+      <Header />
+      <main>
+        <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+        </div>
+      </main>
+    </div>
+  </div>
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/view/Header.vue'
+import Sidebar from '@/components/view/Sidebar.vue'
+import Preloader from '@/components/view/Preloader.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Sidebar,
+    Preloader,
+    Header,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
